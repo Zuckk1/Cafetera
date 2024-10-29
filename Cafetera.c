@@ -1,7 +1,7 @@
 #include <stdio.h>
 int main(){
-    int opcion1, opcion2, opcion3;
-    printf("Estas a punto de prepararte un cafe...");
+    int opcion1, opcion2, opcion3, temp, comida;
+    printf("Estas a punto de prepararte un cafe ☕︎...");
     printf("\n\n1. Prender la cafetera \n2. Colocar la capsula en la cafetera \n3. Rascarse la cabeza");
     printf("\nElige la opcion correcta: ");
     scanf("%d",&opcion1);
@@ -24,6 +24,19 @@ int main(){
         return 0;
     }
 
+    printf("\nColoca los grados correctos para preparar el cafe: ");
+    scanf("%d",&temp);
+    if (temp >= 95)
+    { 
+        printf("Se cafe se quemara");
+        return 0;
+    } else if  (temp <= 95) {  
+        printf("Su cafe estara muy frio");
+        return 0;
+    } else {
+        printf("Siguiente paso");
+    }
+
     printf("\n\n1. Tomarse el cafe \n2. Levitar \n3. Poner en marcha la cafetera");
     printf("\nElige la opcion correcta: ");
     scanf("%d",&opcion3);
@@ -35,7 +48,7 @@ int main(){
         printf("Opcion incorrecta");
         return 0;
     }
-    printf("\n\nCafe listo!");
+    printf("\n\nCafe listo! ☕︎ ");
 
 
 return 0;
