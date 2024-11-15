@@ -1,7 +1,23 @@
 #include <stdio.h>
 int main(){
     int opcion1, opcion2, opcion3, temp, comida;
-    printf("Estas a punto de prepararte un cafe ☕︎...");
+    float sumaPrecios = 0;
+    float precioCafe = 2.50;
+    int Opcion;
+
+    do {
+        printf("Bienvenido a la cafeteria, elije que quieres comprar, para terminar con un 0");
+        printf("\n1. Cafe $2.50: \nEleccion: ");
+        scanf("%d",&Opcion);
+            if (Opcion == 1) {
+            sumaPrecios += precioCafe;
+            }
+    } while (Opcion != 0);
+    printf ("\nUsted pagara: %f",sumaPrecios);
+
+/// Use el do-while para crear un bucle en el que pido la cantidad de cafes que quiere comprar, hasta que se rompa el bucle colocando el numero 0 para seguir con el programa
+
+    printf("\nEstas a punto de prepararte un cafe ☕︎...");
     printf("\n\n1. Prender la cafetera \n2. Colocar la capsula en la cafetera \n3. Rascarse la cabeza");
     printf("\nElige la opcion correcta: ");
     scanf("%d",&opcion1);
@@ -30,7 +46,7 @@ int main(){
     { 
         printf("Se cafe se quemara");
         return 0;
-    } else if  (temp <= 95) {  
+    } else if  (temp <= 90) {  
         printf("Su cafe estara muy frio");
         return 0;
     } else {
@@ -54,4 +70,4 @@ int main(){
 return 0;
 }
 
- 
+ /// AGREGAR PRECIOS CAFE Y COMIDAS ///
